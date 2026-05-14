@@ -16,6 +16,7 @@ export interface Project {
   github: string;
   demo: string;
   imageSeeds: string[];
+  externalLink?: string;
 }
 
 interface Portfolio {
@@ -24,7 +25,8 @@ interface Portfolio {
     email: string; github: string; linkedin: string; location: string; established: number;
   };
   skills: { category: string; items: { name: string; level: number }[] }[];
-  experience: { vol: string; company: string; role: string; dates: string; description: string; bullets: string[] }[];
+  experience: { vol: string; company: string; role: string; dates: string; description?: string; bullets: string[] }[];
+  freelance: { vol: string; client: string; role: string; dates: string; description?: string; bullets: string[] }[];
   projects: Project[];
 }
 
@@ -34,7 +36,7 @@ export const portfolio: Portfolio = {
     title: "Designer",
     tagline: "Design for impact",
     about:
-      "I practice design thinking to shape brand’s Design direction by creating seamless experiences. ",
+      "With over three years of experience spanning brand strategy, financial communication, and business consulting, I specialize in the asset and wealth management sectors. My expertise encompasses Go-to-Market strategy, marketing transformation, brand positioning, and business model design. Having collaborated closely with HNI and UHNI-focused platforms, I bring a rare blend of strategic thinking and design-led communication to equity-driven investment products. I have driven impactful initiatives across diverse industries—including Wealth & Asset Management, FinTech, Real Estate, Automotive, and Brand Consulting—with a steadfast commitment to translating complex financial narratives into clear, compelling investor communications.",
     email: "pranjallbhadauriaa@gmail.com",
     github: "https://github.com/alexchen",
     linkedin: "https://www.linkedin.com/in/pranjalb2901/",
@@ -47,86 +49,108 @@ export const portfolio: Portfolio = {
     {
       vol: "VOL. 04",
       company: "True Beacon",
-      role: "Creative Lead",
-      dates: "Aug 2024 — Jan 2026",
+      role: "Creative Lead / Marketing Associate / PR Intern",
+      dates: "August 2024 - January 2026",
+      description: "",
       bullets: [
         "Led end-to-end creative execution across digital, social, brand, presentation, and integrated campaign assets.",
-        " Owned social media strategy and management, driving periodic performance analysis and growth-led content decisions.",
+        "Owned social media strategy and management, driving periodic performance analysis and growth-led content decisions.",
         "Established and scaled the brand’s visual language, tone, and design systems across all touchpoints.",
-        " Managed the brand’s design, communication, and marketing execution end-to-end in close alignment with business goals.",
-        " Iterated and optimized the website to improve traffic, engagement, and content discovery.",
+        "Managed the brand’s design, communication, and marketing execution end-to-end in close alignment with business goals.",
+        "Iterated and optimized the website to improve traffic, engagement, and content discovery.",
         "Launched the TB Observatory vertical to strengthen industry relevance and drive sustained website viewership.",
+        "Co-led dynamic UI design for Mr. Nikhil Kamath's website, reflecting brand identity and expertise.",
+        "Contributed to brand identity for the 'WTF is?' podcast, driving successful launch.",
+        "Strategically planned the 'WTF is?' first podcast launch achieving 100K views in 24 hours.",
+        "Achieved an engagement increase on social media via creative data visual content.",
+        "Conducted comprehensive competitive analysis for innovative PR and Brand Marketing strategies.",
+        "Supported media outreach, streamlining tasks, and increasing lead generation.",
+        "Collaborated across teams to develop the EFQ (Equity Factor Quant) pitch deck for TB Wealth Product.",
       ],
-
     },
     {
       vol: "VOL. 03",
-      company: "Royal Enfield.",
-      role: "Communication Strategy and Design(Contractual)",
+      company: "Royal Enfield",
+      role: "Design & Market Research Intern",
       dates: "Feb 2024 - Jul 2024",
-      description:
-        "y planners and logistics firms.",
+      description: "Served dual roles in Primary Market Research and the Global Brand and Marketing Department.",
       bullets: [
-        "Shipped ahandle 12M points without dropping frames.",
-        "Owned the public REST and GraphQL APIs end-to-end, including auth and billing.",
+        "Led in-depth interviews with 50 potential customers, uncovering critical reasons for Classic 350 rejection.",
+        "Collaborated in a meticulous analysis of past rejections, identifying recurring themes.",
+        "Drove impactful contributions to product launch by executing engaging product newsletters: Classic 350 and Meteor 350.",
+        "Conceptualized captivating marketing collaterals for the bikers' community for social media marketing.",
+        "Royal Enfield - The Timeless Classic UI Design."
       ],
     },
     {
       vol: "VOL. 02",
-      company: "ArthAlpha",
-      role: "Visual Presentation Design",
-      dates: "Dec 2023 — Feb 2024",
-      description:
-        "Generalist on a small product team building B2B workflow software for legal teams.",
+      company: "Finforall by Jupiter",
+      role: "UI and Graphic Designer",
+      dates: "June 2020 - September 2020",
+      description: "",
       bullets: [
-        "Designed a document diffing engine still in production five years on.",
-        "Wrote the company's first style guide for typed React.",
+        "Managed a team of 2 designers, achieving 30k followers in 6 months for social media channels through content carousels.",
+        "Designed website interface, improving user experience by centralizing company resources for easy access.",
+        "Illustrated Personal Finance content for easy understanding and adaptation of complex terminologies and concepts.",
+      ],
+    },
+
+
+  ],
+  freelance: [
+    {
+      vol: "VOL. 02",
+      client: "TORO Investment Managers, Savvy Infrastructure Bengaluru",
+      role: "Client Communication Design",
+      dates: "February 2024 – July 2024",
+      description: "",
+      bullets: [
+        "Conducted market, category, and peer benchmarking research to shape narrative, structure, and messaging for pitch decks.",
+        "Translated complex financial and real estate data into clear information design and data visualisations, improving clarity and decision-readiness for investors.",
+        "Delivered multiple high-stakes pitch and presentation assets, aligned with leadership and fundraising objectives.",
+        "Designed brand guidelines and the initial website for the brand.",
       ],
     },
     {
-      vol: "VOL. 02",
-      company: "NKSquared",
-      role: "Business Service Design",
-      dates: "Sept 2023 — Dec 2023",
-      description:
-        "",
+      vol: "VOL. 01",
+      client: "ArthAlpha Investment Management Bengaluru, Karnataka",
+      role: "Investors’ Design",
+      dates: "December 2023 – February 2024",
+      description: "",
       bullets: [
-        "Ideated and designed features for the WTF is Podcast's new media platform, enhancing community engagement and interaction.",
-        "Analyzed problem statements and identified target audience pain points to inform design strategies.",
-        "Conducted competitive analysis, gaining insights to shape an intuitive UX model for the MVP.",
-        "Drafted the MVP's first UX design, incorporating user feedback and market research for optimal usability.",
-        "Fostered cross-functional team collaboration to align WTF community service visions and outcomes.",
+        "Designed visual presentation systems to articulate the brand narrative and clearly communicate USPs of the product Brahmastra.",
+        "Translated abstract product and business ideas into structured, insight-led visual stories which further contributed in raising first INR 100 Crores for the company.",
       ],
     },
   ],
   projects: [
     {
       id: "1",
-      slug: "chronicle-app",
-      title: "The Chronicle App",
-      tag: "EXCLUSIVE",
-      type: "Web Application",
-      role: "Lead Engineer",
-      status: "Shipped, 2025",
-      date: "MAY 2025",
+      slug: "royal-enfield-newsletter",
+      title: "Royal Enfield",
+      tag: "FEATURED",
+      type: "Newsletter Design",
+      role: "Design Intern",
+      status: "Published",
+      date: "VOL. 9",
       description:
-        "A news aggregator that reads the day's web so you don't have to. Quietly meta.",
+        "The Timeless Classic UI Design and marketing collaterals for the bikers' community.",
       lede:
-        "Chronicle pulls thousands of feeds, deduplicates by story (not by URL), and presents the day in a lean, single-column reading view.",
-      stack: ["Next.js", "TypeScript", "PostgreSQL", "Redis", "OpenAI"],
+        "Drove impactful contributions to the product launch by executing engaging product newsletters for Classic 350.",
+      stack: ["UI Design", "Content Strategy", "Figma", "Marketing"],
       features: [
-        "Story-level deduplication using semantic embeddings.",
-        "Reader mode that strips chrome from any source on the fly.",
-        "Personal archive with full-text search across everything you've read.",
-        "Quiet hours and digest delivery by email.",
+        "Captivating marketing collaterals for social media.",
+        "Clear information design for the bikers' community.",
+        "Interactive newsletter layout.",
       ],
       challenge:
-        "Most aggregators show the same wire story fifty times. We needed to cluster pieces by event without false positives across politically charged topics.",
+        "Communicating the legacy of Royal Enfield in a modern, engaging format.",
       solution:
-        "We embed headlines and ledes with a small open model, cluster via HDBSCAN, then run a cheap cross-encoder re-rank. Editors confirm clusters in a human-in-the-loop tool.",
-      github: "https://github.com/alexchen/chronicle",
-      demo: "https://chronicle.example.com",
-      imageSeeds: ["chronicle1", "chronicle2"],
+        "Designed 'The Timeless Classic' UI, combining vintage aesthetics with clean, modern typography.",
+      github: "",
+      demo: "",
+      imageSeeds: ["royalenfield1", "royalenfield2"],
+      externalLink: "https://www.royalenfield.com/in/en/newsletter/",
     },
     {
       id: "2",

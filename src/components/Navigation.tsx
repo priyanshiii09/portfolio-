@@ -3,8 +3,8 @@ import { Link, useLocation } from "@tanstack/react-router";
 const items = [
   { label: "FRONT PAGE", to: "/", page: "01" },
   { label: "ABOUT", hash: "#about", page: "02" },
-
-  { label: "RECORD", hash: "#experience", page: "04" },
+  { label: "RECORD", hash: "#experience", page: "03" },
+  { label: "FREELANCE", hash: "#freelance", page: "04" },
   { label: "DISPATCHES", hash: "#projects", page: "05" },
   { label: "LETTERS", hash: "#contact", page: "06" },
 ];

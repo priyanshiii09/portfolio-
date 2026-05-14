@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Hero, About, Experience, Projects, Contact } from "@/components/sections";
+import { Hero, About, Experience, Freelance, Projects, Contact } from "@/components/sections";
 import { PageTurnTransition } from "@/components/PageTurnTransition";
 
 export const Route = createFileRoute("/")({
@@ -21,6 +21,7 @@ function Home() {
         <Hero />
         <About />
         <Experience />
+        <Freelance />
         <Projects />
         <Contact />
       </main>
