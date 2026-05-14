@@ -2,7 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 
 const items = [
   { label: "FRONT PAGE", to: "/", page: "01" },
-  { label: "ABOUT", hash: "#about", page: "02" },
+  { label: "ABOUT", to: "/about", page: "02" },
   { label: "RECORD", hash: "#experience", page: "03" },
   { label: "FREELANCE", hash: "#freelance", page: "04" },
   { label: "DISPATCHES", hash: "#projects", page: "05" },
@@ -18,7 +18,7 @@ export function Navigation() {
       {/* Desktop side tabs */}
       <nav className="fixed right-0 top-1/2 z-50 hidden -translate-y-1/2 flex-col gap-2 md:flex">
         {items.map((it, i) => {
-          const href = onHome && it.hash ? it.hash : "/";
+          const href = it.to || (onHome && it.hash ? it.hash : `/${it.hash || ""}`);
           const isActive = onHome && i === 0;
           return (
             <a
@@ -58,7 +58,7 @@ export function Navigation() {
       <nav className="fixed left-0 right-0 top-0 z-50 flex overflow-x-auto md:hidden"
         style={{ background: "var(--paper-dark)", borderBottom: "1px solid var(--ink)" }}>
         {items.map((it) => {
-          const href = onHome && it.hash ? it.hash : "/";
+          const href = it.to || (onHome && it.hash ? it.hash : `/${it.hash || ""}`);
           return (
             <a key={it.label} href={href} className="meta whitespace-nowrap px-3 py-2"
               style={{ borderRight: "1px solid var(--ink-faded)" }}>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import { portfolio } from "@/data/portfolio";
 import { Stamp } from "@/components/Stamp";
 import { Annotation } from "@/components/Annotation";
@@ -19,17 +20,10 @@ export function Hero() {
         <div className="meta">EST. {p.established} · VOL. 1 · NO. 138 · ONE PENNY</div>
         <h1 className="headline mt-2 flex items-center justify-center gap-4 md:gap-6 flex-wrap" style={{ fontSize: "clamp(48px, 9vw, 100px)", lineHeight: 0.95 }}>
           PRANJAL BHADAURIA
-          <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
-            alt="Pranjal Bhadauria"
-            className="w-[0.8em] h-[0.8em] rounded-full object-cover border-[0.05em]"
-            style={{ borderColor: "var(--ink)", filter: "grayscale(100%) contrast(1.2)" }}
-
-          />
         </h1>
         <div className="editorial-rule mt-4 flex items-center justify-between py-2">
           <span className="meta">{today}</span>
-          <span className="meta italic">"All the code that's fit to ship"</span>
+          <span className="meta italic" style={{ textTransform: "none" }}>"Where strategy meets elegant financial storytelling."</span>
           <span className="meta">EST. READERSHIP — HIRING MANAGERS</span>
         </div>
       </header>
@@ -39,14 +33,14 @@ export function Hero() {
         <div className="md:col-span-7 md:pr-8" style={{ borderRight: "1px solid var(--ink-faded)" }}>
           <div className="meta mb-3">EXCLUSIVE — PAGE ONE</div>
           <h2 className="headline" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.02 }}>
-            DESIGNER<br />
+            BUSINESS SERVICE DESIGNER<br />
             <em style={{ fontWeight: 400 }}></em>
           </h2>
           <p className="drop-cap mt-6">
-            {p.tagline} For seven years, {p.name.split(" ")[0]} has been quietly responsible
-            for the kind of software that simply works — the sort that ships on time, scales
-            without drama, and is a pleasure to inherit. He is, our editors are pleased to report,
-            available for new commissions.
+            {p.tagline}. For over three years, {p.name.split(" ")[0]} has been quietly responsible
+            for the kind of design that simply works — the sort that clarifies complex financial narratives,
+            positions brands with authority, and builds investor trust. She is, our editors are pleased
+            to report, available for new commissions.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a href="#projects" data-cursor="read" className="btn-ribbon">READ MORE ↓</a>
@@ -55,9 +49,6 @@ export function Hero() {
         </div>
 
         <aside className="relative md:col-span-5">
-          <div className="absolute -top-4 right-0 z-10">
-            <Stamp rotate={-12}>Available for Hire</Stamp>
-          </div>
           <div className="border-2 p-6" style={{ borderColor: "var(--ink)" }}>
             <div className="meta border-b pb-2" style={{ borderColor: "var(--ink-faded)" }}>
               FEATURE — ABOUT THE AUTHOR
@@ -66,7 +57,6 @@ export function Hero() {
             <p className="meta mt-1">{p.title.toUpperCase()} · {p.location.toUpperCase()}</p>
             <div className="halftone my-4 h-32 w-full" style={{ filter: "contrast(1.2)" }} />
             <p style={{ fontSize: 16, lineHeight: 1.6 }}>{p.about}</p>
-            <Annotation rotate={2} className="mt-3">— still answers his own emails</Annotation>
           </div>
         </aside>
       </div>
@@ -77,40 +67,16 @@ export function Hero() {
 export function About() {
   return (
     <section id="about" className="relative px-6 py-20 md:px-16" style={{ background: "var(--paper-dark)" }}>
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="editorial-rule headline py-3 text-center"
-      >
-        WHO IS {portfolio.personal.name.toUpperCase()}?
-      </motion.h2>
-      <p className="meta mt-2 text-center">A PROFILE — IN THREE COLUMNS</p>
-
-      <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
-        <div className="relative md:pr-6 md:column-rule md:pl-6">
-          <Annotation rotate={-3} className="absolute -left-2 -top-6 hidden md:block">
-            → based in Bangalore
-          </Annotation>
-          <p className="drop-cap">
-            Pranjal has spent over three years navigating the intersection of brand strategy, financial communication, and business consulting. With a focused track record in asset and wealth management, she specializes in transforming complex financial concepts into accessible, engaging narratives.
+      <div className="mx-auto max-w-3xl text-center">
+        <Link to="/about" data-cursor="open" className="block page-curl border-2 p-10 hover:-translate-y-1 transition-transform" style={{ borderColor: "var(--ink)", background: "var(--paper)" }}>
+          <h2 className="headline" style={{ fontSize: "clamp(32px, 5vw, 48px)" }}>
+            WHO IS {portfolio.personal.name.toUpperCase()}?
+          </h2>
+          <p className="mt-6 italic" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
+            Read the exclusive profile on her three years spanning brand strategy, financial communication, and business consulting.
           </p>
-        </div>
-        <div className="relative md:pr-6 md:column-rule md:pl-6">
-          <p>
-            Her expertise spans Go-to-Market (GTM) strategy, brand positioning, and business model design. Having worked closely with HNI and UHNI-focused platforms, she brings a rare blend of strategic thinking and design-led communication to equity-driven investment products.
-          </p>
-          <div className="pull-quote my-8">
-            "Good design, like good communication, is about clarity and trust."
-          </div>
-          <Annotation rotate={2}>driven by impact</Annotation>
-        </div>
-        <div className="md:pl-6 md:column-rule">
-          <p>
-            She has driven impactful initiatives across diverse sectors including Wealth &amp; Asset Management, FinTech, Real Estate, Automotive, and Brand Consulting. Throughout her career, her consistent emphasis has been on translating complex financial data into clear, compelling business and investor communications.
-          </p>
-          <Annotation rotate={-2} className="mt-4">P.S. always seeking the next challenge</Annotation>
-        </div>
+          <div className="meta mt-8 underline">READ THE FULL PROFILE →</div>
+        </Link>
       </div>
     </section>
   );
@@ -292,7 +258,7 @@ export function Contact() {
 
       <footer className="mt-20 border-t pt-6 text-center" style={{ borderColor: "var(--ink)" }}>
         <p className="meta">— FIN —</p>
-        <p className="meta mt-2">© {new Date().getFullYear()} THE DEVELOPER'S GAZETTE · ALL RIGHTS RESERVED · PRINTED WITH CARE</p>
+        <p className="meta mt-2">© {new Date().getFullYear()} THE PAPER TURN CHRONICLES · ALL RIGHTS RESERVED · PRINTED WITH CARE</p>
       </footer>
     </section>
   );

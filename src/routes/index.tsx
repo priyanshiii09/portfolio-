@@ -5,10 +5,10 @@ import { PageTurnTransition } from "@/components/PageTurnTransition";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Developer's Gazette — Alex Chen, Full-Stack Engineer" },
-      { name: "description", content: "An editorial portfolio of software, dispatches and case studies by Alex Chen." },
-      { property: "og:title", content: "The Developer's Gazette" },
-      { property: "og:description", content: "An editorial portfolio of software by Alex Chen." },
+      { title: "The Paper Turn Chronicles — Pranjal Bhadauria, Designer" },
+      { name: "description", content: "An editorial portfolio of design, strategy and financial storytelling by Pranjal Bhadauria." },
+      { property: "og:title", content: "The Paper Turn Chronicles" },
+      { property: "og:description", content: "An editorial portfolio by Pranjal Bhadauria." },
     ],
   }),
   component: Home,

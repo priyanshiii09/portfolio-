@@ -36,12 +36,13 @@ export const portfolio: Portfolio = {
     title: "Designer",
     tagline: "Design for impact",
     about:
-      "With over three years of experience spanning brand strategy, financial communication, and business consulting, I specialize in the asset and wealth management sectors. My expertise encompasses Go-to-Market strategy, marketing transformation, brand positioning, and business model design. Having collaborated closely with HNI and UHNI-focused platforms, I bring a rare blend of strategic thinking and design-led communication to equity-driven investment products. I have driven impactful initiatives across diverse industries—including Wealth & Asset Management, FinTech, Real Estate, Automotive, and Brand Consulting—with a steadfast commitment to translating complex financial narratives into clear, compelling investor communications.",
+      "With 3+ years of experience in brand strategy and financial communication, I specialize in asset and wealth management, focusing on Go-to-Market strategy, brand positioning, and investor communication for HNI and UHNI platforms.",
+
     email: "pranjallbhadauriaa@gmail.com",
-    github: "https://github.com/alexchen",
+
     linkedin: "https://www.linkedin.com/in/pranjalb2901/",
     location: "Bangalore, India",
-    established: 2018,
+    established: 2023,
   },
 
 

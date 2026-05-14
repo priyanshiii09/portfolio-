@@ -12,7 +12,7 @@ export const Route = createFileRoute("/projects/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.project.title} — The Developer's Gazette` },
+          { title: `${loaderData.project.title} — The Paper Turn Chronicles` },
           { name: "description", content: loaderData.project.description },
           { property: "og:title", content: loaderData.project.title },
           { property: "og:description", content: loaderData.project.description },
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/projects/$slug")({
   notFoundComponent: () => (
     <div className="p-20 text-center">
       <h1 className="headline">404 — DISPATCH NOT FOUND</h1>
-      <Link to="/" className="meta mt-4 inline-block underline">← RETURN TO GAZETTE</Link>
+      <Link to="/" className="meta mt-4 inline-block underline">← RETURN TO CHRONICLES</Link>
     </div>
   ),
   component: ProjectDetail,
@@ -127,7 +127,7 @@ function ProjectDetail() {
         </div>
 
         <div className="mt-20 text-center">
-          <Link to="/" data-cursor="back" className="btn-ribbon">← RETURN TO GAZETTE</Link>
+          <Link to="/" data-cursor="back" className="btn-ribbon">← RETURN TO CHRONICLES</Link>
         </div>
       </main>
     </PageTurnTransition>
