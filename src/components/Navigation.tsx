@@ -3,7 +3,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 const items = [
   { label: "FRONT PAGE", to: "/", page: "01" },
   { label: "ABOUT", hash: "#about", page: "02" },
-  { label: "SKILLS", hash: "#skills", page: "03" },
+
   { label: "RECORD", hash: "#experience", page: "04" },
   { label: "DISPATCHES", hash: "#projects", page: "05" },
   { label: "LETTERS", hash: "#contact", page: "06" },
@@ -74,7 +74,7 @@ export function Navigation() {
         className="meta fixed left-4 top-4 z-50 hidden md:block"
         style={{ background: "var(--paper-dark)", padding: "6px 10px", border: "1px solid var(--ink)" }}
       >
-        ← THE GAZETTE
+        ← THE PORTFOLIO
       </Link>
     </>
   );

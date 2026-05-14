@@ -17,8 +17,15 @@ export function Hero() {
       {/* Masthead */}
       <header className="text-center">
         <div className="meta">EST. {p.established} · VOL. 1 · NO. 138 · ONE PENNY</div>
-        <h1 className="headline mt-2" style={{ fontSize: "clamp(48px, 9vw, 128px)", lineHeight: 0.95 }}>
-          THE DEVELOPER&apos;S GAZETTE
+        <h1 className="headline mt-2 flex items-center justify-center gap-4 md:gap-6 flex-wrap" style={{ fontSize: "clamp(48px, 9vw, 100px)", lineHeight: 0.95 }}>
+          PRANJAL BHADAURIA
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+            alt="Pranjal Bhadauria"
+            className="w-[0.8em] h-[0.8em] rounded-full object-cover border-[0.05em]"
+            style={{ borderColor: "var(--ink)", filter: "grayscale(100%) contrast(1.2)" }}
+
+          />
         </h1>
         <div className="editorial-rule mt-4 flex items-center justify-between py-2">
           <span className="meta">{today}</span>
@@ -32,8 +39,8 @@ export function Hero() {
         <div className="md:col-span-7 md:pr-8" style={{ borderRight: "1px solid var(--ink-faded)" }}>
           <div className="meta mb-3">EXCLUSIVE — PAGE ONE</div>
           <h2 className="headline" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.02 }}>
-            FULL-STACK ENGINEER SEEKS<br />
-            <em style={{ fontWeight: 400 }}>NEXT GREAT CHALLENGE</em>
+            DESIGNER<br />
+            <em style={{ fontWeight: 400 }}></em>
           </h2>
           <p className="drop-cap mt-6">
             {p.tagline} For seven years, {p.name.split(" ")[0]} has been quietly responsible
@@ -69,7 +76,7 @@ export function Hero() {
 
 export function About() {
   return (
-    <section id="about" className="relative px-6 py-20 md:px-16">
+    <section id="about" className="relative px-6 py-20 md:px-16" style={{ background: "var(--paper-dark)" }}>
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -118,47 +125,6 @@ export function About() {
   );
 }
 
-export function Skills() {
-  return (
-    <section id="skills" className="relative px-6 py-20 md:px-16" style={{ background: "var(--paper-dark)" }}>
-      <h2 className="editorial-rule headline py-3 text-center">THE CLASSIFIEDS</h2>
-      <p className="meta mt-2 text-center">SKILLS &amp; PROFICIENCIES — ARRANGED BY DEPARTMENT</p>
-
-      <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
-        {portfolio.skills.map((cat) => (
-          <div key={cat.category} className="border-2 p-5" style={{ borderColor: "var(--ink)", background: "var(--paper)" }}>
-            <div className="editorial-rule headline py-2 text-center" style={{ fontSize: 22 }}>
-              {cat.category.toUpperCase()}
-            </div>
-            <ul className="mt-4 space-y-4">
-              {cat.items.map((s) => (
-                <li key={s.name}>
-                  <div className="flex items-baseline justify-between">
-                    <span className="headline" style={{ fontSize: 18 }}>{s.name}</span>
-                    <span className="meta">LVL {s.level}/5</span>
-                  </div>
-                  <div className="mt-1 flex gap-1">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <div
-                        key={i}
-                        className="skill-bar flex-1"
-                        style={{
-                          opacity: i < s.level ? 1 : 0.18,
-                          animationDelay: `${i * 0.1}s`,
-                        }}
-                      />
-                    ))}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export function Experience() {
   return (
     <section id="experience" className="relative px-6 py-20 md:px-16">
@@ -184,7 +150,11 @@ export function Experience() {
               {job.company}
             </h3>
             <p className="meta mt-1">{job.role.toUpperCase()}</p>
-            <p className="mt-4" style={{ fontWeight: 600 }}>{job.description}</p>
+            {job.description && (
+              <p className="mt-4" style={{ fontWeight: 600 }}>
+                {job.description}
+              </p>
+            )}
             <ul className="mt-4 space-y-2">
               {job.bullets.map((b) => (
                 <li key={b} className="pl-6" style={{ textIndent: "-1.5rem" }}>

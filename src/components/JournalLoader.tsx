@@ -59,7 +59,7 @@ export function JournalLoader() {
                 THE
                 <br />
                 <span style={{ fontSize: 56, display: "block", margin: "8px 0" }}>
-                  GAZETTE
+                  PORTFOLIO
                 </span>
                 <span style={{ fontFamily: "Courier Prime", fontSize: 12 }}>EST. MMXVIII</span>
               </div>

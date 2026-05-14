@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Hero, About, Skills, Experience, Projects, Contact } from "@/components/sections";
+import { Hero, About, Experience, Projects, Contact } from "@/components/sections";
 import { PageTurnTransition } from "@/components/PageTurnTransition";
 
 export const Route = createFileRoute("/")({
@@ -20,7 +20,6 @@ function Home() {
       <main className="paper-grain page-curl relative min-h-screen pb-20">
         <Hero />
         <About />
-        <Skills />
         <Experience />
         <Projects />
         <Contact />

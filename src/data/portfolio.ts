@@ -30,82 +30,72 @@ interface Portfolio {
 
 export const portfolio: Portfolio = {
   personal: {
-    name: "Alex Chen",
-    title: "Full-Stack Engineer",
-    tagline: "Building reliable systems and delightful interfaces.",
+    name: "Pranjal Bhadauria",
+    title: "Designer",
+    tagline: "Design for impact",
     about:
-      "Alex is a full-stack engineer with seven years of experience shipping production software for startups and Fortune 500 newsrooms alike. He believes in well-typed code, well-formed sentences, and a properly pulled espresso.",
-    email: "alex@chen.dev",
+      "I practice design thinking to shape brand’s Design direction by creating seamless experiences. ",
+    email: "pranjallbhadauriaa@gmail.com",
     github: "https://github.com/alexchen",
-    linkedin: "https://linkedin.com/in/alexchen",
-    location: "Brooklyn, NY",
+    linkedin: "https://www.linkedin.com/in/pranjalb2901/",
+    location: "Bangalore, India",
     established: 2018,
   },
-  skills: [
-    {
-      category: "Frontend",
-      items: [
-        { name: "React / Next.js", level: 5 },
-        { name: "TypeScript", level: 5 },
-        { name: "Tailwind CSS", level: 5 },
-        { name: "Framer Motion", level: 4 },
-      ],
-    },
-    {
-      category: "Backend",
-      items: [
-        { name: "Node.js", level: 5 },
-        { name: "PostgreSQL", level: 4 },
-        { name: "Go", level: 3 },
-        { name: "GraphQL", level: 4 },
-      ],
-    },
-    {
-      category: "Tools & Ops",
-      items: [
-        { name: "Docker / K8s", level: 4 },
-        { name: "AWS / Cloudflare", level: 4 },
-        { name: "Figma", level: 3 },
-        { name: "CI/CD", level: 5 },
-      ],
-    },
-  ],
+
+
   experience: [
     {
       vol: "VOL. 04",
-      company: "The Meridian Press",
-      role: "Senior Staff Engineer",
-      dates: "2023 — PRESENT",
-      description:
-        "Lead architect on a real-time editorial CMS serving 14 newsrooms across three continents.",
+      company: "True Beacon",
+      role: "Creative Lead",
+      dates: "Aug 2024 — Jan 2026",
       bullets: [
-        "Migrated a legacy PHP monolith to a typed Node + React stack, halving p95 latency.",
-        "Designed an offline-first filing tool used by 200+ field reporters.",
-        "Mentored a team of six and chaired the internal architecture council.",
+        "Led end-to-end creative execution across digital, social, brand, presentation, and integrated campaign assets.",
+        " Owned social media strategy and management, driving periodic performance analysis and growth-led content decisions.",
+        "Established and scaled the brand’s visual language, tone, and design systems across all touchpoints.",
+        " Managed the brand’s design, communication, and marketing execution end-to-end in close alignment with business goals.",
+        " Iterated and optimized the website to improve traffic, engagement, and content discovery.",
+        "Launched the TB Observatory vertical to strengthen industry relevance and drive sustained website viewership.",
       ],
+
     },
     {
       vol: "VOL. 03",
-      company: "Atlas Cartographics",
-      role: "Full-Stack Engineer",
-      dates: "2020 — 2023",
+      company: "Royal Enfield.",
+      role: "Communication Strategy and Design(Contractual)",
+      dates: "Feb 2024 - Jul 2024",
       description:
-        "Built data tooling for a geospatial analytics platform used by city planners and logistics firms.",
+        "y planners and logistics firms.",
       bullets: [
-        "Shipped a WebGL tile renderer that handled 12M points without dropping frames.",
+        "Shipped ahandle 12M points without dropping frames.",
         "Owned the public REST and GraphQL APIs end-to-end, including auth and billing.",
       ],
     },
     {
       vol: "VOL. 02",
-      company: "Foundry & Co.",
-      role: "Software Engineer",
-      dates: "2018 — 2020",
+      company: "ArthAlpha",
+      role: "Visual Presentation Design",
+      dates: "Dec 2023 — Feb 2024",
       description:
         "Generalist on a small product team building B2B workflow software for legal teams.",
       bullets: [
         "Designed a document diffing engine still in production five years on.",
         "Wrote the company's first style guide for typed React.",
+      ],
+    },
+    {
+      vol: "VOL. 02",
+      company: "NKSquared",
+      role: "Business Service Design",
+      dates: "Sept 2023 — Dec 2023",
+      description:
+        "",
+      bullets: [
+        "Ideated and designed features for the WTF is Podcast's new media platform, enhancing community engagement and interaction.",
+        "Analyzed problem statements and identified target audience pain points to inform design strategies.",
+        "Conducted competitive analysis, gaining insights to shape an intuitive UX model for the MVP.",
+        "Drafted the MVP's first UX design, incorporating user feedback and market research for optimal usability.",
+        "Fostered cross-functional team collaboration to align WTF community service visions and outcomes.",
       ],
     },
   ],
